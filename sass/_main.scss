@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "微軟正黑體", "Microsoft JhengHei", Tahoma, verdana, STHeiti, serif, sans-serif;
+  font-size: 15px;
+  width: 100%;
+  // line-height: 1.5;
+  // font-weight: 300;
+  // color: #333;
+}
+
+.test {
+  border: 1px solid red;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.jusitify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: bolder;
+  color: #37523d;
+}
+
+p {
+  line-height: normal;
+  font-size: 22px;
+  // font-weight: bolder;
+  letter-spacing: 2px;
+}
