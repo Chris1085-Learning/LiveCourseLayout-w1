@@ -12,6 +12,36 @@ body {
   width: 100%;
 }
 
+h1 {
+  font-size: 80px;
+  line-height: 90px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 45px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+p {
+  line-height: normal;
+  font-size: 24px;
+  letter-spacing: 2px;
+  line-height: 36px;
+}
+
+span {
+  font-size: 24px;
+  line-height: 32px;
+  padding-left: 16px;
+  font-weight: bold;
+}
+
 .test {
   border: 1px solid red;
 }
@@ -72,15 +102,179 @@ body {
   text-align: center;
 }
 
-h3 {
-  font-size: 24px;
-  font-weight: bolder;
-  color: #37523d;
+.pt-48 {
+  padding-top: 48px;
 }
 
-p {
-  line-height: normal;
-  font-size: 22px;
-  letter-spacing: 2px;
+.pb-48 {
+  padding-bottom: 48px;
+}
+
+.pl-16 {
+  padding-left: 16px;
+}
+
+.text-color--brown {
+  color: #a00404;
+}
+
+.container {
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container .contact-title,
+.container .skill-title {
+  width: 100%;
+  position: relative;
+}
+
+.container .contact-title::after,
+.container .skill-title::after {
+  position: absolute;
+  width: 100%;
+  content: "";
+  z-index: 1;
+  border-bottom: solid 1px #fff;
+  bottom: -8px;
+}
+
+.container .skill-title::after {
+  width: 83%;
+}
+
+.container .content-line {
+  padding-left: 40px;
+  position: relative;
+}
+
+.container .content-line::before {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 100%;
+  left: 16px;
+  border-left: 1px solid #96a9c4;
+}
+
+.container .title-name {
+  width: 100%;
+  position: relative;
+  margin-bottom: 72px;
+}
+
+.container .title-name h1 {
+  width: 288px;
+}
+
+.container .title-name::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  content: "";
+  z-index: 1;
+  border-bottom: solid 2px black;
+  bottom: -24px;
+}
+
+.container .title {
+  position: relative;
+}
+
+.container .title::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  content: "";
+  z-index: 1;
+  bottom: -8px;
+  border-bottom: 1px solid black;
+}
+
+.skill {
+  height: 100%;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.skill::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 9999px;
+  height: 360px;
+  top: 75px;
+  z-index: -1;
+  background-color: #96a9c4;
+}
+
+.profile-items--dot,
+.edu-time {
+  list-style: none;
+  position: relative;
+  padding-left: 48px;
+  padding-top: 24px;
+}
+
+.profile-items--dot p {
+  margin-bottom: 24px;
+}
+
+.profile-items--dot::before,
+.edu-time::before {
+  display: block;
+  content: "";
+  color: #96a9c4;
+  position: absolute;
+  top: 32px;
+  left: 16px;
+  width: 16px;
+  height: 16px;
+  background-color: #96a9c4;
+  border-radius: 50%;
+}
+
+.edu-time p {
+  margin-bottom: 8px;
+}
+
+.edu-timeline {
+  list-style: none;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.edu-timeline::after {
+  position: absolute;
+  height: 50%;
+  top: 40px;
+  left: 24px;
+  border-left: 1px solid #96a9c4;
+  content: "";
+}
+
+.footer,
+.skill {
+  background: #415165 0% 0% no-repeat padding-box;
+  opacity: 1;
+  color: white;
+  padding: 24px 0px 48px 0px;
+}
+
+.content-items {
+  color: white;
+  padding-top: 40px;
+}
+
+.content-items li {
+  font-size: 24px;
+  padding-bottom: 16px;
+  line-height: 33px;
+}
+
+.soical-icons img {
+  padding-left: 12px;
+  padding-right: 12px;
 }
 /*# sourceMappingURL=style.css.map */
