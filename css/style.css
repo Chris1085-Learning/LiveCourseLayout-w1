@@ -1,14 +1,17 @@
 @charset "UTF-8";
+/*=============================================
+=            General CSS Style                =
+=============================================*/
 *,
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "微軟正黑體", "Microsoft JhengHei", Tahoma, verdana, STHeiti, serif, sans-serif;
-  font-size: 15px;
+  font-family: San Francisco, "微軟正黑體", "Microsoft JhengHei", Tahoma, verdana, STHeiti, serif, sans-serif;
+  font-size: 16px;
   width: 100%;
 }
 
@@ -25,13 +28,12 @@ h2 {
 
 h3 {
   font-size: 24px;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 p {
-  line-height: normal;
   font-size: 24px;
-  letter-spacing: 2px;
+  font-weight: 200;
   line-height: 36px;
 }
 
@@ -42,18 +44,16 @@ span {
   font-weight: bold;
 }
 
-.test {
-  border: 1px solid red;
-}
-
 .row {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  overflow-x: hidden;
 }
 
 .d-flex {
@@ -68,8 +68,8 @@ span {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .wrap {
@@ -77,25 +77,25 @@ span {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .align-items-center {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .jusitify-content-center {
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .justify-content-between {
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .text-center {
@@ -110,11 +110,12 @@ span {
   padding-bottom: 48px;
 }
 
-.pl-16 {
-  padding-left: 16px;
+.bg-dark {
+  background: #415165 0% 0% no-repeat padding-box;
+  color: white;
 }
 
-.text-color--brown {
+.text-brown {
   color: #a00404;
 }
 
@@ -123,40 +124,7 @@ span {
   margin-right: auto;
   margin-left: auto;
 }
-
-.container .contact-title,
-.container .skill-title {
-  width: 100%;
-  position: relative;
-}
-
-.container .contact-title::after,
-.container .skill-title::after {
-  position: absolute;
-  width: 100%;
-  content: "";
-  z-index: 1;
-  border-bottom: solid 1px #fff;
-  bottom: -8px;
-}
-
-.container .skill-title::after {
-  width: 83%;
-}
-
-.container .content-line {
-  padding-left: 40px;
-  position: relative;
-}
-
-.container .content-line::before {
-  position: absolute;
-  display: block;
-  content: "";
-  height: 100%;
-  left: 16px;
-  border-left: 1px solid #96a9c4;
-}
+/*=====  End of General css style  ======*/
 
 .container .title-name {
   width: 100%;
@@ -192,24 +160,27 @@ span {
   border-bottom: 1px solid black;
 }
 
-.skill {
-  height: 100%;
+.container .contact-title,
+.container .skill-title {
+  width: 100%;
   position: relative;
-  margin-bottom: 24px;
 }
 
-.skill::before {
+.container .contact-title::after,
+.container .skill-title::after {
   position: absolute;
-  display: block;
+  width: 100%;
   content: "";
-  width: 9999px;
-  height: 360px;
-  top: 75px;
-  z-index: -1;
-  background-color: #96a9c4;
+  z-index: 1;
+  border-bottom: solid 1px #fff;
+  bottom: -8px;
 }
 
-.profile-items--dot,
+.container .skill-title::after {
+  width: 83%;
+}
+
+.profile-content,
 .edu-time {
   list-style: none;
   position: relative;
@@ -217,11 +188,11 @@ span {
   padding-top: 24px;
 }
 
-.profile-items--dot p {
+.profile-content p {
   margin-bottom: 24px;
 }
 
-.profile-items--dot::before,
+.profile-content::before,
 .edu-time::before {
   display: block;
   content: "";
@@ -254,14 +225,6 @@ span {
   content: "";
 }
 
-.footer,
-.skill {
-  background: #415165 0% 0% no-repeat padding-box;
-  opacity: 1;
-  color: white;
-  padding: 24px 0px 48px 0px;
-}
-
 .content-items {
   color: white;
   padding-top: 40px;
@@ -270,11 +233,71 @@ span {
 .content-items li {
   font-size: 24px;
   padding-bottom: 16px;
-  line-height: 33px;
+  line-height: 32px;
+  font-weight: 200;
+}
+
+.content-items .item {
+  padding-left: 40px;
+  position: relative;
+}
+
+.content-items .item::before {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 100%;
+  left: 16px;
+  border-left: 1px solid #96a9c4;
+}
+
+.skill {
+  height: 100%;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.skill::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 9999px;
+  height: 360px;
+  top: 75px;
+  z-index: -1;
+  background-color: #96a9c4;
+  overflow: hidden;
+}
+
+.work-content {
+  margin-left: 24px;
+  margin-top: 30px;
+  border-left: 1px solid #96a9c4;
+}
+
+.work-content .work-content-items {
+  margin-left: 24px;
+  margin-bottom: 32px;
+}
+
+.work-content .work-content-items img {
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.work-content .work-content-items p {
+  font-size: 20px;
+  line-height: 30px;
+  width: 642px;
+}
+
+.footer,
+.skill {
+  padding: 24px 0px 48px 0px;
 }
 
 .soical-icons img {
-  padding-left: 12px;
-  padding-right: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 /*# sourceMappingURL=style.css.map */

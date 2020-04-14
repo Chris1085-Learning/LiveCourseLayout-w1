@@ -1,3 +1,7 @@
+/*=============================================
+=            General CSS Style                =
+=============================================*/
+
 *,
 *::before,
 *::after {
@@ -5,8 +9,8 @@
 }
 
 body {
-  font-family: "微軟正黑體", "Microsoft JhengHei", Tahoma, verdana, STHeiti, serif, sans-serif;
-  font-size: 15px;
+  font-family: San Francisco, "微軟正黑體", "Microsoft JhengHei", Tahoma, verdana, STHeiti, serif, sans-serif;
+  font-size: 16px;
   width: 100%;
   // line-height: 1.5;
   // font-weight: 300;
@@ -26,14 +30,13 @@ h2 {
 
 h3 {
   font-size: 24px;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 p {
-  line-height: normal;
   font-size: 24px;
-  // font-weight: bolder;
-  letter-spacing: 2px;
+  font-weight: 200;
+  // letter-spacing: 2px;
   line-height: 36px;
 }
 
@@ -44,13 +47,15 @@ span {
   font-weight: bold;
 }
 
-.test {
-  border: 1px solid red;
-}
+// .test {
+//   border: 1px solid red;
+// }
 
 .row {
+  width: 100%;
   display: flex;
   flex-direction: row;
+  overflow-x: hidden;
 }
 
 .d-flex {
@@ -91,56 +96,20 @@ span {
   padding-bottom: 48px;
 }
 
-.pl-16 {
-  padding-left: 16px;
+.bg-dark {
+  background: #415165 0% 0% no-repeat padding-box;
+  color: white;
 }
 
-// .pb-16 {
-//   padding-bottom: 16px;
-// }
-
-.text-color--brown {
+.text-brown {
   color: #a00404;
 }
+/*=====  End of General css style  ======*/
 
 .container {
   width: 1200px;
   margin-right: auto;
   margin-left: auto;
-
-  .contact-title,
-  .skill-title {
-    width: 100%;
-    position: relative;
-  }
-
-  .contact-title::after,
-  .skill-title::after {
-    position: absolute;
-    width: 100%;
-    content: "";
-    z-index: 1;
-    border-bottom: solid 1px #fff;
-    bottom: -8px;
-  }
-
-  .skill-title::after {
-    width: 83%;
-  }
-
-  .content-line {
-    padding-left: 40px;
-    position: relative;
-  }
-
-  .content-line::before {
-    position: absolute;
-    display: block;
-    content: "";
-    height: 100%;
-    left: 16px;
-    border-left: 1px solid #96a9c4;
-  }
 
   .title-name {
     width: 100%;
@@ -174,39 +143,42 @@ span {
     bottom: -8px;
     border-bottom: 1px solid black;
   }
-}
-.skill {
-  // width: 100%;
-  height: 100%;
-  position: relative;
-  margin-bottom: 24px;
+
+  .contact-title,
+  .skill-title {
+    width: 100%;
+    position: relative;
+  }
+
+  .contact-title::after,
+  .skill-title::after {
+    position: absolute;
+    width: 100%;
+    content: "";
+    z-index: 1;
+    border-bottom: solid 1px #fff;
+    bottom: -8px;
+  }
+
+  .skill-title::after {
+    width: 83%;
+  }
 }
 
-.skill::before {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 9999px;
-  height: 360px;
-  top: 75px;
-  z-index: -1;
-  background-color: #96a9c4;
-}
-
-.profile-items--dot,
+.profile-content,
 .edu-time {
   list-style: none;
   position: relative;
   padding-left: 48px;
   padding-top: 24px;
 }
-.profile-items--dot {
+.profile-content {
   p {
     margin-bottom: 24px;
   }
 }
 
-.profile-items--dot::before,
+.profile-content::before,
 .edu-time::before {
   display: block;
   content: "";
@@ -241,27 +213,80 @@ span {
   content: "";
 }
 
-.footer,
-.skill {
-  background: #415165 0% 0% no-repeat padding-box;
-  opacity: 1;
-  color: white;
-  padding: 24px 0px 48px 0px;
-}
-
 .content-items {
   color: white;
   padding-top: 40px;
   li {
     font-size: 24px;
     padding-bottom: 16px;
-    line-height: 33px;
+    line-height: 32px;
+    font-weight: 200;
   }
+
+  .item {
+    padding-left: 40px;
+    position: relative;
+  }
+
+  .item::before {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 100%;
+    left: 16px;
+    border-left: 1px solid #96a9c4;
+  }
+}
+
+.skill {
+  // width: 100%;
+  height: 100%;
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.skill::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 9999px;
+  height: 360px;
+  top: 75px;
+  z-index: -1;
+  background-color: #96a9c4;
+  overflow: hidden;
+}
+
+.work-content {
+  margin-left: 24px;
+  margin-top: 30px;
+  border-left: 1px solid #96a9c4;
+
+  .work-content-items {
+    margin-left: 24px;
+    margin-bottom: 32px;
+
+    img {
+      margin-bottom: 8px;
+      margin-top: 8px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 30px;
+      width: 642px;
+    }
+  }
+}
+
+.footer,
+.skill {
+  padding: 24px 0px 48px 0px;
 }
 
 .soical-icons {
   img {
-    padding-left: 12px;
-    padding-right: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
   }
 }
